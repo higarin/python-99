@@ -1,6 +1,6 @@
-
 import unittest
 import main
+
 
 class Test(unittest.TestCase):
     def test_is_palindrome(self):
@@ -19,4 +19,3 @@ class Test(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
