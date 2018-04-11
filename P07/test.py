@@ -10,6 +10,7 @@ class Test(unittest.TestCase):
         self.assertEqual(main.flatten([[1], [2], [3], [4], [5]]), [1, 2, 3, 4, 5])
         self.assertEqual(main.flatten([[1, 2, 3, 4, 5]]), [1, 2, 3, 4, 5])
         self.assertEqual(main.flatten([[[1, 2, 3, 4, 5]]]), [1, 2, 3, 4, 5])
+        self.assertEqual(main.flatten([1, [2, [3, 4], 5]]), [1, 2, 3, 4, 5])
 
 
 if __name__ == "__main__":
