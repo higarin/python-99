@@ -11,6 +11,7 @@ def pack(elements):
         else:
             tmp.append(e)
 
-    ret.append(tmp)
+    if tmp:
+        ret.append(tmp)
 
     return ret
