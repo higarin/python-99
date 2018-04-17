@@ -1,17 +1,11 @@
+import sys
+sys.path.append('../')
+
+from P09.main import pack
+
+
 def encode(elements):
-    ret = []
-    tmp = []  # working
-
-    for e in elements:
-        if not tmp:
-            tmp = [e]
-        elif tmp and tmp[-1] != e:
-            ret.append(tmp)
-            tmp = [e]
-        else:
-            tmp.append(e)
-
-    ret.append(tmp)
+    ret = pack(elements)
 
     encoded = []
     for e in ret:
