@@ -3,6 +3,6 @@
 ### Example
 ```
 >>> import main
-main.random_permute([1, 2, 3, 4, 5])
+>>> main.random_permute([1, 2, 3, 4, 5])
 [5, 1, 3, 4, 2]
 ```

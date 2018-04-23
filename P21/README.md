@@ -3,6 +3,6 @@
 ### Example
 ```
 >>> import main
-main.insert_at(2, -1, [1, 2, 3, 4])
+>>> main.insert_at(2, -1, [1, 2, 3, 4])
 [1, 2, -1, 3, 4]
 ```

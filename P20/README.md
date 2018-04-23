@@ -3,6 +3,6 @@
 ### Example
 ```
 >>> import main
-main.remove_at(['a', 'b', 'c', 'd', 'e'], 3)
+>>> main.remove_at(['a', 'b', 'c', 'd', 'e'], 3)
 [['a', 'b', 'd', 'e'], 'c']
 ```
