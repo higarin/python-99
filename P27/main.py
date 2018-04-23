@@ -1,30 +1,21 @@
-def search_group(size, condition, elements, last_index=0):
-    if elements.count(-1) == 0:
-        return [elements]
+import copy
+
+
+def group(groups, elements, index=0, temp=None):
+    if temp is None:
+        temp = [[] for _ in range(len(groups))]
 
     ret = []
-    for i in range(last_index, size):
-        for group_idx in range(0, len(condition)):
-            work = elements.copy()
-            work[i] = group_idx
-            if work.count(group_idx) <= condition[group_idx]:
-                ret.extend(search_group(size, condition, work, i + 1))
+    for j in range(0, len(groups)):
+        work = copy.deepcopy(temp)
 
-    return ret
+        work[j] += [elements[index]]
 
-
-def group(condition, elements):
-    size = len(elements)
-
-    cs = search_group(size, condition, [-1] * size)
-
-    ret = []
-    for c in cs:
-        tmp = [[] for _ in range(len(condition))]
-        for (a, b) in zip(elements, c):
-            tmp[b].append(a)
-
-        ret.append(tmp)
+        if len(work[j]) <= groups[j]:
+            if index + 1 < len(elements):
+                ret += group(groups, elements, index + 1, work)
+            else:
+                ret += [work]
 
     return ret
 
