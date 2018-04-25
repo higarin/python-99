@@ -1,0 +1,27 @@
+digraph g{
+  "[a, [[c, b], [[f, e], d]]]" -> "a"[label=0]
+  "[a, [[c, b], [[f, e], d]]]" -> "[[c, b], [[f, e], d]]"[label=1]
+
+  "a"[shape=record, color=red, label="{a|0}"]
+
+  "[[c, b], [[f, e], d]]" -> "[c, b]"[label=0]
+  "[[c, b], [[f, e], d]]" -> "[[f, e], d]"[label=1]
+
+  "[c, b]" -> "c"[label=0]
+  "[c, b]" -> "b"[label=1]
+
+  "c"[shape=record, color=red, label="{c|100}"]
+  "b"[shape=record, color=red, label="{b|101}"]
+
+
+  "[[f, e], d]" -> "[f, e]"[label=0]
+  "[[f, e], d]" -> "d"[label=1]
+
+  "d"[shape=record, color=red, label="{d|111}"]
+
+  "[f, e]" -> "f"[label=0]
+  "[f, e]" -> "e"[label=1]
+
+  "f"[shape=record, color=red, label="{f|1100}"]
+  "e"[shape=record, color=red, label="{e|1101}"]
+}
