@@ -1,0 +1,72 @@
+digraph g{
+  "[[],[],[]]" -> "[[aldo],[],[]]";
+
+  "[[aldo],[],[]]" -> "[[aldo, beat],[],[]]"
+  "[[aldo, beat],[],[]]" -> "[[aldo, beat, carla],[],[]]"
+  "[[aldo, beat, carla],[],[]]"[color=red]
+
+  "[[aldo, beat],[],[]]" -> "[[aldo, beat],[carla],[]]"
+
+  "[[aldo, beat],[carla],[]]" -> "[[aldo, beat, david],[carla],[]]"
+  "[[aldo, beat, david],[carla],[]]"[color=red]
+
+  "[[aldo, beat],[carla],[]]" -> "[[aldo, beat],[carla, david],[]]"
+
+  "[[aldo, beat],[carla, david],[]]" -> "[[aldo, beat, evi],[carla, david],[]]"
+  "[[aldo, beat, evi],[carla, david],[]]"[color=red]
+
+  "[[aldo, beat],[carla, david],[]]" -> "[[aldo, beat],[carla, david, evi],[]]"
+
+  "[[aldo, beat],[carla, david, evi],[]]" -> "[[aldo, beat, flip],[carla, david, evi],[]]"
+  "[[aldo, beat, flip],[carla, david, evi],[]]"[color=red]
+  "[[aldo, beat],[carla, david, evi],[]]" -> "[[aldo, beat],[carla, david, evi, flip],[]]"
+  "[[aldo, beat],[carla, david, evi, flip],[]]"[color=red]
+
+  "[[aldo, beat],[carla, david, evi],[]]" -> "[[aldo, beat],[carla, david, evi],[flip]]"
+
+  "[[aldo, beat],[carla, david, evi],[flip]]" -> "[[aldo, beat, gary],[carla, david, evi],[flip]]"
+  "[[aldo, beat, gary],[carla, david, evi],[flip]]"[color=red]
+  "[[aldo, beat],[carla, david, evi],[flip]]" -> "[[aldo, beat],[carla, david, evi, gary],[flip]]"
+  "[[aldo, beat],[carla, david, evi, gary],[flip]]"[color=red]
+
+  "[[aldo, beat],[carla, david, evi],[flip]]" -> "[[aldo, beat],[carla, david, evi],[flip, gary]]"
+
+  "[[aldo, beat],[carla, david, evi],[flip, gary]]" -> "[[aldo, beat, hugo],[carla, david, evi],[flip, gary]]"
+  "[[aldo, beat, hugo],[carla, david, evi],[flip, gary]]"[color=red]
+  "[[aldo, beat],[carla, david, evi],[flip, gary]]" -> "[[aldo, beat],[carla, david, evi, hugo],[flip, gary]]"
+  "[[aldo, beat],[carla, david, evi, hugo],[flip, gary]]"[color=red]
+
+  "[[aldo, beat],[carla, david, evi],[flip, gary]]" -> "[[aldo, beat],[carla, david, evi],[flip, gary, hugo]]"
+
+  "[[aldo, beat],[carla, david, evi],[flip, gary, hugo]]" -> "[[aldo, beat, ida],[carla, david, evi],[flip, gary, hugo]]"
+  "[[aldo, beat, ida],[carla, david, evi],[flip, gary, hugo]]"[color=red]
+  "[[aldo, beat],[carla, david, evi],[flip, gary, hugo]]" -> "[[aldo, beat],[carla, david, evi, ida],[flip, gary, hugo]]"
+  "[[aldo, beat],[carla, david, evi, ida],[flip, gary, hugo]]"[color=red]
+  "[[aldo, beat],[carla, david, evi],[flip, gary, hugo]]" -> "[[aldo, beat],[carla, david, evi],[flip, gary, hugo, ida]]"
+  "[[aldo, beat],[carla, david, evi],[flip, gary, hugo, ida]]"[color=blue]
+
+  "[[aldo, beat],[carla, david],[]]" -> "[[aldo, beat],[carla, david],[evi]]"
+
+  "[[aldo, beat],[carla, david],[evi]]" -> "[[aldo, beat, flip],[carla, david],[evi]]"
+  "[[aldo, beat, flip],[carla, david],[evi]]"[color=red]
+
+  "[[aldo, beat],[carla, david],[evi]]" -> "[[aldo, beat],[carla, david, flip],[evi]]"
+  "[[aldo, beat],[carla, david],[evi]]" -> "[[aldo, beat],[carla, david],[evi. flip]]"
+
+  "[[aldo, beat],[carla],[]]" -> "[[aldo, beat],[carla],[david]]"
+
+  "[[aldo, beat],[],[]]" -> "[[aldo, beat],[],[carla]]"
+
+  "[[aldo],[],[]]" -> "[[aldo],[beat],[]]"
+  "[[aldo],[beat],[]]" -> "[[aldo, carla],[beat],[]]"
+  "[[aldo],[beat],[]]" -> "[[aldo],[beat, carla],[]]"
+  "[[aldo],[beat],[]]" -> "[[aldo],[beat],[carla]]"
+
+  "[[aldo],[],[]]" -> "[[aldo],[],[beat]]"
+  "[[aldo],[],[beat]]" -> "[[aldo, carla],[],[beat]]"
+  "[[aldo],[],[beat]]" -> "[[aldo],[carla],[beat]]"
+  "[[aldo],[],[beat]]" -> "[[aldo],[],[beat, carla]]"
+
+  "[[],[],[]]" -> "[[],[aldo],[]]";
+  "[[],[],[]]" -> "[[],[],[aldo]]";
+}
