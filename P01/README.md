@@ -1,4 +1,4 @@
-# P01 Find the last element of a list.
+# P01 リストの最後の要素を見つけよう
 
 ### Example
 ```
