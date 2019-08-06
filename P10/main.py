@@ -1,5 +1,5 @@
 def encode(a):
-    from P09 import pack
+    from main2 import pack
     b = pack(a)
     c = []
 
