@@ -1,5 +1,11 @@
 def encode_modified(a):
-    from main2 import pack
+    import os
+    import sys
+
+    sys.path.append(os.path.join(os.path.dirname(__file__),'..'))
+
+    from P09.main import pack
+
     d = pack(a)
     c = []
 
