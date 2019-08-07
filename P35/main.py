@@ -1,14 +1,13 @@
 def prime_factors(n):
     ret = []
 
-    while n % 2 == 0:
-        ret.append(2)
-        n /= 2
-    f = 3
+    f = 2
     while n > 1:
         if n % f == 0:
             ret.append(f)
             n /= f
+        elif f == 2:
+            f += 1
         else:
             f += 2
 
