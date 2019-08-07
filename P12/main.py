@@ -3,7 +3,7 @@ def decode(a):
 
     for i in a:
         if type(i) is list:
-            b += [i[1] for y in range(i[0])]
+            b += [i[1]] * i[0]
         elif type(i) is int:
             b.append(i)
 
