@@ -1,2 +1,6 @@
 def duplicate(a,b):
-    return sorted(a * b)
+    c = []
+    for i in range(len(a)):
+        c += [a[i]]*b
+
+    return c
