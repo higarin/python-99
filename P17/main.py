@@ -1,3 +1,3 @@
 def split(a,b):
-    return list([a[:b]] + [a[b:]])
+    return [a[:b]] + [a[b:]]
 
