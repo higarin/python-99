@@ -7,4 +7,4 @@ def rnd_select(a,b):
 
     return result
 
-    #return [random.choice(range(b+1)) for i in range(a)]
+    ##return [random.choice(range(b+1)) for i in range(a)]
