@@ -1,5 +1,4 @@
 from itertools import combinations
-import pprint
 
 def combination(a,b):
     d = []
