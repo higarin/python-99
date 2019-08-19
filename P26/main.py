@@ -1,9 +1,9 @@
 from itertools import combinations
 
-def combination(a,b):
-    d = []
-    c = combinations(b,a)
-    for i in c:
-        d.append(list(i))
+def combination(int_split,int_list):
+    result = []
+    temp = combinations(int_list,int_split)
+    for i in temp:
+        result.append(list(i))
 
-    return d
+    return result
