@@ -1,8 +1,11 @@
-import math
+import sys
+sys.path.append('../')
+from P32.main import gcd
+
 
 def totient_phi(num):
-    gcd_list = []
-    for i in range(1,num):   
-        if math.gcd(i,num) == 1:
-            gcd_list.append(i)
-    return len(gcd_list)
+    count = 0
+    for i in range(1,num):
+        if gcd(i,num) == 1:
+            count += 1
+    return count
