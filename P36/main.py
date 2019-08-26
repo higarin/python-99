@@ -1,14 +1,15 @@
 import sys
 sys.path.append('../')
 from P35.main import prime_factors
+from collections import Counter
+
 
 def prime_factors_multi(num):
+    prime_factorslist = prime_factors(num)
+    prime_countlist = Counter(prime_factorslist)
     result = []
-    prime_num = [2,3,5,7]
-    prime_factor = prime_factors(num)
-    
-    for i in prime_num:
-        if prime_factor.count(i) != 0:
-            result.append([i,prime_factor.count(i)])
+
+    for primekey,primevalue in prime_countlist.items():
+        result.append([primekey,primevalue])
 
     return result
