@@ -1,12 +1,14 @@
-import unittest
+import sys
+sys.path.append('../')
 
-import main
+import unittest
+from P32.main import gcd
 
 
 class Test(unittest.TestCase):
     def test(self):
-        self.assertEqual(main.gcd(63, 36), 9)
-        self.assertEqual(main.gcd(36, 63), 9)
+        self.assertEqual(gcd(63, 36), 9)
+        self.assertEqual(gcd(36, 63), 9)
 
 
 if __name__ == "__main__":

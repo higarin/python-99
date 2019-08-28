@@ -1,11 +1,13 @@
-import unittest
+import sys
+sys.path.append('../')
 
-import main
+import unittest
+from P41.main import goldbach_list
 
 
 class Test(unittest.TestCase):
     def test(self):
-        self.assertEqual(main.goldbach_list(9, 20),
+        self.assertEqual(goldbach_list(9, 20),
                          [
                              [10, 3, 7],
                              [12, 5, 7],
@@ -16,7 +18,7 @@ class Test(unittest.TestCase):
                          ])
 
     def test_set_limit(self):
-        self.assertEqual(main.goldbach_list(1, 2000, 50),
+        self.assertEqual(goldbach_list(1, 2000, 50),
                          [
                              [992,  73, 919],
                              [1382, 61, 1321],

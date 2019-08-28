@@ -1,17 +1,18 @@
+import sys
+sys.path.append('../')
+
 import unittest
-import main
+from P01.main import last
 
 
 class Test(unittest.TestCase):
-    def test_size_0(self):
+    def test_empty_list(self):
         with self.assertRaises(IndexError):
-            main.last([])
+            last([])
 
-    def test_size_1(self):
-        self.assertEqual(main.last([1]), 1)
-
-    def test_size_2(self):
-        self.assertEqual(main.last([1, 2]), 2)
+    def test(self):
+        self.assertEqual(last(["python"]), "python")
+        self.assertEqual(last(['p', 'y', 't', 'h', 'o', 'n']), 'n')
 
 
 if __name__ == "__main__":
