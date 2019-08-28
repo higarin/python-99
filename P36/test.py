@@ -9,6 +9,10 @@ class Test(unittest.TestCase):
     def test(self):
         self.assertEqual(prime_factors_multi(315), [[3, 2], [5, 1], [7, 1]])
         self.assertEqual(prime_factors_multi(700), [[2, 2], [5, 2], [7, 1]])
+        self.assertEqual(prime_factors_multi(7700), [[2, 2], [5, 2], [7, 1], [11, 1]])
+
+        self.assertEqual(prime_factors_multi(701), [[701, 1]])
+
 
 
 if __name__ == "__main__":
