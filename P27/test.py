@@ -1,31 +1,33 @@
-import unittest
+import sys
+sys.path.append('../')
 
-import main
+import unittest
+from P27.main import group, group3
 
 
 class Test(unittest.TestCase):
     def test_group3(self):
-        groups = main.group3(['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])
+        groups = group3(['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])
         self.assertEqual(len(groups), 1260)
 
     def test_group_size(self):
         # 9C9
         self.assertEqual(
-            len(main.group([9], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])),
+            len(group([9], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])),
             1)
 
         # 9C5 * 4C4
         self.assertEqual(
-            len(main.group([5, 4], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])),
+            len(group([5, 4], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])),
             126)
 
         # 9C2 * 7C3 * 4C4
         self.assertEqual(
-            len(main.group([2, 3, 4], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])),
+            len(group([2, 3, 4], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])),
             1260)
 
     def test_group(self):
-        groups = main.group([2, 3, 4], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])
+        groups = group([2, 3, 4], ['aldo', 'beat', 'carla', 'david', 'evi', 'flip', 'gary', 'hugo', 'ida'])
 
         self.assertEqual(len(groups), 1260)
         self.assertTrue([['aldo', 'beat'], ['carla', 'david', 'evi'], ['flip', 'gary', 'hugo', 'ida']] in groups)

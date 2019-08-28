@@ -1,6 +1,8 @@
-import unittest
+import sys
+sys.path.append('../')
 
-from main import huffman
+import unittest
+from P50.main import huffman
 
 
 class Test(unittest.TestCase):

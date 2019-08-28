@@ -1,6 +1,9 @@
+import sys
+sys.path.append('../')
+
 import unittest
 
-from main import *
+from P46.main import *
 
 
 class Test(unittest.TestCase):

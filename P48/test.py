@@ -1,9 +1,8 @@
 import sys
-import unittest
-
-from main import table
-
 sys.path.append('../')
+
+import unittest
+from P48.main import table
 from P46.main import AND, OR, EQ
 
 
