@@ -9,7 +9,9 @@ from P24.main import rnd_select
 class Test(unittest.TestCase):
     def test(self):
         ret = rnd_select(6, 10)
+        
         self.assertEqual(len(ret), 6)
+        self.assertEqual(len(ret), len(set(ret)))
         self.assertGreaterEqual(min(ret), 0)
         self.assertLessEqual(max(ret), 10)
 
