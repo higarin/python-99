@@ -1,9 +1,7 @@
 def gcd(x, y):
     if y > x:
         # swap
-        temp = x
-        x = y
-        y = temp
+        x, y = y, x
 
     z = x % y
 

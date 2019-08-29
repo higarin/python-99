@@ -9,8 +9,8 @@ def encode_modified(elements):
 
     encoded = []
     for e in ret:
-        value = e[0]
         size = len(e)
+        value = e[0]
         if size > 1:
             encoded.append([size, value])
         else:

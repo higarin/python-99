@@ -1,5 +1,4 @@
 import sys
-
 sys.path.append('../')
 
 from P39.main import prime_numbers

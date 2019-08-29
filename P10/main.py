@@ -9,8 +9,6 @@ def encode(elements):
 
     encoded = []
     for e in ret:
-        value = e[0]
-        size = len(e)
-        encoded.append([size, value])
+        encoded.append([len(e), e[0]])
 
     return encoded
